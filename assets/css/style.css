@@ -1,27 +1,37 @@
-body {
-    
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: yellow;
+    word-spacing: 3px;
+}
+
+#subwrapper {
+    postion: relative;
+    left: 200px;
 }
 
 #title-game {
-
+    font-size: 30px;
+    /* position: relative;
+    top: 200px;
+    left: 280px; */
+    font-size: 50px;
 }
 
-#time-remaining-text {
-
+.allQuestions {
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 2.5em;
 }
 
-#question1-text {
-
+#start-button {
+    background: white;
+    color: black;
+    /* position: relative;
+    top: 250px;
+    left: 500px; */
 }
 
-#question2-text {
-
-}
-
-#question3-text {
-
-}
-
-#question4-text {
-
+#done-button {
+    background: white;
+    color: black;
 }

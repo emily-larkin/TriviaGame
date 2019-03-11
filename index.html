@@ -8,23 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- linking css  -->
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" >
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css">
 
 </head>
 
-<body>
-    <h2 id="title-game">Trivia Game!</h2>
-    <button id="start-button">Start</button>
-    <div id="time-remaining-text"> Time Remaining: </div>
-    <div id="question1-text"></div>
-    <div id="question2-text"></div>
-    <div id="question3-text"></div>
-    <div id="question4-text"></div>
+<body background="./assets/images/Screen Shot 2019-03-11 at 5.08.12 PM.png">
+    <div class="container">
+        <div id="wrapper">
+            <h2 id="title-game">Scooby Doo Trivia Game!</h2>
+            <div id="subwrapper">
+                <button id="start-button" class="btn btn-primary btn-lg active">Start!</button>
+            </div>
+            <br>
+            <button id="done-button" class="btn btn-primary btn-lg active">Finish!</button>
+        </div>
+    </div>
 </body>
 
- <!-- linking jquery  -->
+<!-- linking jquery  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
- <!-- linking javascript -->
+<!-- linking javascript -->
 <script text="text/javascript" src="./assets/javascript/app.js"></script>
 
 </html>
