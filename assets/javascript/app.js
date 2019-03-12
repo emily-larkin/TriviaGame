@@ -83,26 +83,26 @@ function checkingAnswers() {
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
-    radioValue = $("input[name='questions']:checked").val();
-    if (radioValue === questions[2].correctAnswer) {
+    radioq2 = $("input[name='questions']:checked").val();
+    if (radioq2 === questions[2].correctAnswer) {
         correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
-    radioValue = $("input[name='questions']:checked").val();
-    if (radioValue === questions[3].correctAnswer) {
+    radioq3 = $("input[name='questions']:checked").val();
+    if (radioq3 === questions[3].correctAnswer) {
         correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
-    radioValue = $("input[name='questions']:checked").val();
-    if (radioValue === questions[4].correctAnswer) {
+    radioq4 = $("input[name='questions']:checked").val();
+    if (4 === questions[4].correctAnswer) {
         correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
-    radioValue = $("input[name='questions']:checked").val();
-    if (radioValue === questions[5].correctAnswer) {
+    radioq5 = $("input[name='questions']:checked").val();
+    if (radioq5 === questions[5].correctAnswer) {
         correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
