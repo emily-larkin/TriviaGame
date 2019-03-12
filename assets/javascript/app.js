@@ -39,7 +39,7 @@ var questions = [{
 
 // create an on click function for the start button 
 $("#start-button").on("click", function () {
-    $("#start-button").remove();
+    $("#start-button").hide();
     timer = setInterval(timeRemaining, 1000);
     $("#subwrapper").prepend("<h3>Time Remaining: <span id='counter'>60</span> Seconds</h3>");
 
@@ -52,7 +52,7 @@ $("#start-button").on("click", function () {
     for (var i = 0; i < questions.length; i++) {
         $("#subwrapper").append("<div class='allQuestions'>" + questions[i].question + "</div>");
         for (var j = 0; j < questions[i].answers.length; j++) {
-            $("#subwrapper").append("<input type='radio' name='question - " + i +
+            $("#subwrapper").append("<input type='radio' id = 'q" + [i] + "' name='question - " + i +
                 " ' value = ' " + questions[i].answers[j] + "'>" + questions[i].answers[j]);
         }
     }
@@ -70,39 +70,40 @@ function timeRemaining() {
 
 // functions to check if the correct answer is equal to the radio value, not currently working though 
 function checkingAnswers() {
-    radioValue = $("input[name='questions']:checked").val();
-    if (radioValue === questions.question[0].correctAnswer) {
-        correctAnswer = correctAnswer + 1;
+    radioq0 = $("#q0").val();
+    console.log(radioq0)
+    if (radioq0 === questions[0].correctAnswer) {
+        correctCounter = correctCounter + 1;
+    } else {
+        incorrectCounter = incorrectCounter + 1;
+    }
+    radioq1 = $("#q1").val();
+    if (radioq1 === questions[1].correctAnswer) {
+        correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
     radioValue = $("input[name='questions']:checked").val();
-    if (radioValue === questions.question[1].correctAnswer) {
-        correctAnswer = correctAnswer + 1;
+    if (radioValue === questions[2].correctAnswer) {
+        correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
     radioValue = $("input[name='questions']:checked").val();
-    if (radioValue === questions.question[2].correctAnswer) {
-        correctAnswer = correctAnswer + 1;
+    if (radioValue === questions[3].correctAnswer) {
+        correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
     radioValue = $("input[name='questions']:checked").val();
-    if (radioValue === questions.question[3].correctAnswer) {
-        correctAnswer = correctAnswer + 1;
+    if (radioValue === questions[4].correctAnswer) {
+        correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
     radioValue = $("input[name='questions']:checked").val();
-    if (radioValue === questions.question[4].correctAnswer) {
-        correctAnswer = correctAnswer + 1;
-    } else {
-        incorrectCounter = incorrectCounter + 1;
-    }
-    radioValue = $("input[name='questions']:checked").val();
-    if (radioValue === questions.question[5].correctAnswer) {
-        correctAnswer = correctAnswer + 1;
+    if (radioValue === questions[5].correctAnswer) {
+        correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
@@ -125,7 +126,5 @@ function scoring() {
 $("#done-button").hide();
 
 // stores the radio button value that was checked 
-var radioValue = $("input[name='questions']:checked").val();
 
 checkingAnswers();
-scoring();
