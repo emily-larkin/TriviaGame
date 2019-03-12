@@ -72,36 +72,36 @@ function timeRemaining() {
 function checkingAnswers() {
     radioq0 = $("#q0").val();
     console.log(radioq0)
-    if (radioq0 === questions[0].correctAnswer) {
+    if (radioq0 == questions[0].correctAnswer) {
         correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
     radioq1 = $("#q1").val();
-    if (radioq1 === questions[1].correctAnswer) {
+    if (radioq1 == questions[1].correctAnswer) {
         correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
-    radioq2 = $("input[name='questions']:checked").val();
-    if (radioq2 === questions[2].correctAnswer) {
+    radioq2 = $("#q2").val();
+    if (radioq2 == questions[2].correctAnswer) {
         correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
-    radioq3 = $("input[name='questions']:checked").val();
+    radioq3 = $("#q3").val();
     if (radioq3 === questions[3].correctAnswer) {
         correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
-    radioq4 = $("input[name='questions']:checked").val();
+    radioq4 = $("#q4").val();
     if (4 === questions[4].correctAnswer) {
         correctCounter = correctCounter + 1;
     } else {
         incorrectCounter = incorrectCounter + 1;
     }
-    radioq5 = $("input[name='questions']:checked").val();
+    radioq5 = $("#q5").val();
     if (radioq5 === questions[5].correctAnswer) {
         correctCounter = correctCounter + 1;
     } else {
